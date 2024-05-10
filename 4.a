@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int same_numbers(int a){
+    return a % 2; 
+}
+
+int main(int argc, char *argv[]){
+    printf("%d", same_numbers(atoi(argv[1])));
+}
+
