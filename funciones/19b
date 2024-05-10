@@ -1,0 +1,30 @@
+void setup() {
+  size(400, 400);  // Tamaño de la ventana
+  background(255);  // Color de fondo blanco
+  drawHouse(width/2, height/2, 100, 150);  // Llama a la función drawHouse() con dimensiones personalizadas centradas en el medio de la ventana
+}
+
+void draw() {
+  // No necesitamos hacer nada aquí porque todo se ha dibujado en setup()
+}
+
+void drawHouse(float x, float y, float w, float h) {
+  // Dibuja el rectángulo principal de la casa
+  fill(255, 0, 0);  // Color rojo para la casa
+  rectMode(CENTER);
+  rect(x, y, w, h);
+  
+  // Dibuja el techo de la casa
+  fill(0, 255, 0);  // Color verde para el techo
+  triangle(x - w/2, y - h/2,  // Esquina superior izquierda
+           x + w/2, y - h/2,  // Esquina superior derecha
+           x, y - h);         // Esquina superior del triángulo
+  
+  // Dibuja la puerta
+  fill(0);  // Color negro para la puerta
+  rect(x, y + h/4, w/4, h/2);
+  
+  // Dibuja la ventana
+  fill(255);  // Color blanco para la ventana
+  rect(x - w/4, y - h/4, w/4, h/4);
+}
