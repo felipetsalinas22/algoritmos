@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int same_numbers(int a){
-    return a % 2; 
+int same_numbers(int a, int b){
+    return a == b; 
 }
 
 int main(int argc, char *argv[]){
-    printf("%d", same_numbers(atoi(argv[1])));
+    printf("%i", same_numbers(atoi(argv[1]), atoi(argv[2])));
 }
-
